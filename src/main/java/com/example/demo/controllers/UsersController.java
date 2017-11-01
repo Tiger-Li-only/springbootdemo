@@ -73,4 +73,22 @@ public class UsersController {
         return "删除成功!";
     }
 
+    @RequestMapping("/index")
+    public String toIndex(ModelMap modelMap){
+        modelMap.addAttribute("hello", "hello springboot");
+        return "/pages/index";
+    }
+
+    @RequestMapping("/indexfree")
+    public String toIndexfree(ModelMap modelMap){
+        modelMap.addAttribute("hello", "hello springboot");
+        return "/pages/indexfree";
+    }
+
+    @RequestMapping("/indexv")
+    public String toIndexv(ModelMap modelMap){
+        modelMap.addAttribute("hello", "hello springboot");
+        return "/pages/indexv";
+    }
+
 }
