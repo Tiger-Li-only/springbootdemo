@@ -44,19 +44,52 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
+
+		<!--thymeleaf支持-->
 		<!--<dependency>-->
 			<!--<groupId>org.springframework.boot</groupId>-->
 			<!--<artifactId>spring-boot-starter-thymeleaf</artifactId>-->
 		<!--</dependency>-->
+
+		<!--freemarker支持-->
 		<!--<dependency>-->
 			<!--<groupId>org.springframework.boot</groupId>-->
 			<!--<artifactId>spring-boot-starter-freemarker</artifactId>-->
 		<!--</dependency>-->
+
+		<!--velocity支持-->
 		<!--<dependency>-->
 			<!--<groupId>org.springframework.boot</groupId>-->
 			<!--<artifactId>spring-boot-starter-velocity</artifactId>-->
 		<!--</dependency>-->
+
 		<!-- groovy支持-->
+		<!--<dependency>-->
+		<!--<groupId>org.springframework.boot</groupId>-->
+		<!--<artifactId>spring-boot-starter-groovy-templates</artifactId>-->
+		<!--</dependency>-->
+		<!--<dependency>-->
+		<!--<groupId>org.springframework.boot</groupId>-->
+		<!--<artifactId>spring-boot-starter-groovy</artifactId>-->
+		<!--</dependency>-->
+
+         <!--支持Mustache-->
+		<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-mustache</artifactId>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+			<!--
+            <optional>true</optional>
+            optional=true,依赖不会传递，该项目依赖devtools；
+            之后依赖myboot项目的项目如果想要使用devtools，需要重新引入
+            -->
+		</dependency>
 	</dependencies>
 
 	<build>

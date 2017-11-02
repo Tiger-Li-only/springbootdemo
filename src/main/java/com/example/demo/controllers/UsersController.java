@@ -12,8 +12,11 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author
@@ -75,13 +78,19 @@ public class UsersController {
 
     @RequestMapping("/index")
     public String toIndex(ModelMap modelMap){
+        Users users = new Users();
+        users.setUsername("张三");
         modelMap.addAttribute("hello", "hello springboot");
+        modelMap.addAttribute("user",users);
         return "/pages/index";
     }
 
     @RequestMapping("/indexfree")
     public String toIndexfree(ModelMap modelMap){
+        Users users = new Users();
+        users.setUsername("张三");
         modelMap.addAttribute("hello", "hello springboot");
+        modelMap.addAttribute("user",users);
         return "/pages/indexfree";
     }
 
@@ -90,5 +99,18 @@ public class UsersController {
         modelMap.addAttribute("hello", "hello springboot");
         return "/pages/indexv";
     }
+
+    @RequestMapping("/indexg")
+    public ModelAndView toIndexg(ModelMap modelMap){
+        modelMap.addAttribute("hello","hello groovy");
+        return new ModelAndView("templates/pages/indexg");
+    }
+
+    @RequestMapping("/indexm")
+    public String toIndexm(ModelMap modelMap){
+        modelMap.addAttribute("hello","hello Mustache");
+        return "/pages/indexm";
+    }
+
 
 }

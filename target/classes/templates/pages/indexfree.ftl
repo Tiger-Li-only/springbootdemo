@@ -6,6 +6,8 @@
 </head>
 <body>
 FreeMarker模板引擎
-<h1>${hello}</h1>
+<#--<#if user??>-->
+<h1>${(user.username)!}</h1>
+<#--</#if>-->
 </body>
 </html>
